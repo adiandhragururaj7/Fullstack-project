@@ -1,10 +1,90 @@
-*{
-    margin: 0;
+:root{
+    --main-radius: 5px;
+    --main-padding: 5px;
 }
-.logo{
 
-    
+.home{
+    height: 100vh;
+    display: grid;
+    grid-gap: 0.2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr,1.5fr,1.2fr,0.8fr;
+   grid-template-areas: "nav nav nav nav"
+    "sidebar main main main" 
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
 }
+
+
 nav{
-    
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: nav;
+    background-color:#545254;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+nav>ul{
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+
+}
+
+.item2{
+    grid-area: main;
+    background-color: silver;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding)
+}
+.item3{
+    grid-area: sidebar;
+    background-color: slateblue;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding)
+}
+.item4{
+    grid-area: footer;
+    background-color: teal;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding)
+}
+
+.content1{
+    background-color: tomato;
+   grid-area: content1;
+   border-radius: var(--main-radius);
+   padding-top: var(--main-padding)
+}
+.content2{
+    background-color: yellow;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding)
+}
+.content3{
+    background-color: yellowgreen;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding)
+}
+@media only screen and (max-width:550px){
+    .home{
+        display: grid;
+        height:100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr,0.4fr,2.2fr,1.2fr,1.2fr,1.2fr,1fr;
+        grid-template-areas: "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
 }
