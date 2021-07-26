@@ -23,17 +23,29 @@ nav{
     display: flex;
     margin: 0;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     grid-area: nav;
-    background-color:#545254;
+    background-color:#f35900;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
-nav>ul{
-    padding: 0;
-    margin: 0;
-    justify-content: center;
 
+.btn{
+    background-color: skyblue;
+    font-size: 15px;
+    height: 40px;
+    width: min-max(100px,auto);
+    border-radius: var(--main-radius);
+    color: wheat;
+}
+.btn:visited{
+ background-color: rgb(27, 106, 233);
+ color: black;
+}
+.btn:hover{
+    background-color: rgb(4, 22, 39);
+    color: white;
+    font-family:sans-serif;
 }
 
 .item2{
@@ -44,7 +56,7 @@ nav>ul{
 }
 .item3{
     grid-area: sidebar;
-    background-color: slateblue;
+    background-color: rgb(79, 73, 116);
     border-radius: var(--main-radius);
     padding-top: var(--main-padding)
 }
